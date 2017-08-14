@@ -93,6 +93,6 @@ insert.insertAdjacentHTML('beforebegin', '<p class="text">Daliy Quiz</p>');
 
 6. `li`요소 중 마지막 요소를 삭제 하시오.
 
-var ul = document.getElementsByClassName('main')[0];
-var lastChild = ul.childNodes[ul.length-1];
+var ul = document.querySelector('.main');
+var lastChild = ul.children[ul.children.length-1];
 ul.removeChild(lastChild);
