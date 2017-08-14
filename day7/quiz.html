@@ -52,8 +52,9 @@
   </div>
   <!-- wrapper 종료 -->
   <script>
-  var insert = document.getElementsByTagName('ul')[0];
-  insert.insertAdjacentHTML('beforebegin', '<p class="text">Daliy Quiz</p>');
+  var ul = document.querySelector('.main');
+  var lastChild = ul.children[ul.children.length-1];
+  ul.removeChild(lastChild);
   </script>
 </body>
 </html>
