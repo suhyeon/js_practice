@@ -5,14 +5,13 @@
 예를들어 s가 ‘01033334444’면 ‘*******4444’를 리턴하고, ‘027778888’인 경우는 ‘*****8888’을 리턴한다. */
 
 function hideNumbers(str){
-  var s = str.split(''); // 파라미터를 s에 분할
   var result = []; //최종값 빈객체 선언
-  var one = s.slice(s.length-4); // 마지막 4자리를 복사
+  var one = str.substring(str.length-4); // 마지막 4자리를 복사
  
-  for(var i = 0; i < s.length - 4; i++){ //전체의 4자리만 뺀나머지를 반복
+  for(var i = 0; i < str.length - 4; i++){ //전체의 4자리만 뺀나머지를 반복
     result.push('*'); //빈객체에 개수만큼 * push
   }
-  result.push(one.join('')); //남겨놨던 4자리를 병합
+  result.push(one); //남겨놨던 4자리를 병합
   var test = result.reduce(function(pre, cur){ // 객체요소를 다 더한다.
     return pre+cur; //reduce함수에 더한 값 전달
   });

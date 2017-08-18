@@ -21,9 +21,7 @@ function toWeirdCase(s) {
     }
     t.push(' '); //t에 공백 추가
   }
-  var result = t.reduce(function(pre, cur){ //각 요소를 다 더한다
-    return pre+cur; // 더한 값 reduce에 반환
-  });
+  var result = t.join('');
   return result; //다더한 값 반환
 }
 

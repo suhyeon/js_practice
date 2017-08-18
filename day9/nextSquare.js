@@ -9,8 +9,7 @@ n이 임의의 정수 x의 제곱이 아니라면 ‘no’을 리턴하는 함�
 function nextSqaure(n){
   var sample = Math.sqrt(n); //파라미터의 제곱근을 sample로 선언할당
   if(Number.isInteger(sample)=== true){ // 파라미터의 제곱근인 정수인지 판별
-    var test = Math.sqrt(n); //test에 파라미터의 제곱근 할당 
-    var result = Math.pow(test+1,2); //result에 test+1의 제곱을 구한다.
+    var result = Math.pow(sample+1,2); //result에 test+1의 제곱을 구한다.
     return result;
   }else{ //제곱근이 정수가 아니라면
     return 'no..'; //no 반환

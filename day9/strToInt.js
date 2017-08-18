@@ -7,13 +7,16 @@ str은 부호(+,-)와 숫자로만 구성되어 있고, 잘못된 값이 입력�
 
 
 function strToInt(str){ 
-  var test = /[\d-]/g; //숫자인지, -부호가 있는지를 검사
+  
+  return parseInt(str);
+
+   /*var test = /[\d-]/g; //숫자인지, -부호가 있는지를 검사
   if(test.test(str) === true){ //검사결과가 true면
     var param = parseInt(str); //스트링을 숫자로 변환
     return param; //변환값 반환
   }else{ //결과가 false면
     return 'again'; //agian 반환
-  }
+  }*/
 }
   
   console.log(strToInt('1234'));  // 1234

@@ -6,14 +6,13 @@ waterMelon 함수는 정수 n을 매개변수로 입력받는다.
 예를들어 n이 4이면 ‘수박수박‘을 리턴하고 3이라면 ‘수박수‘를 리턴한다. */
 
 function waterMelon(n){ 
-  var sample = '수'; //수 선언할당
-  var sample2 = '박'; //박 선언할당
-  var result = ''; //빈 스트링 선언
+  var sample = '수박'; //수박 선언할당
+  var result = ''; //최종값 선언
   for(var i = 0; i < n; i++){ //파라미터만큼 반복
     if(i%2 === 0){ //i가 짝수면
-      result += sample;  //빈 스트링에 수 할당
+      result += sample.substring(0,1);  //빈 스트링에 수 할당
     }else{ // i가 홀수면
-      result += sample2; //빈 스트링에 박 할당
+      result += sample.substring(1,2); //빈 스트링에 박 할당
     }
   }
   return result; //최종문 반환
